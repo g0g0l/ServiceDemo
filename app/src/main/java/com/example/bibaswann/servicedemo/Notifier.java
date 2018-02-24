@@ -29,12 +29,11 @@ public class Notifier {
     }
 
     public void updateNotification(int percent) {
-        mBuilder.setProgress(100, percent, false);
-        mNotifyManager.notify(id, mBuilder.build());
         if (percent == 100) {
-//            mNotifyManager.cancel(id);
             mBuilder.setContentText("Job complete").setProgress(0, 0, false);
             mNotifyManager.notify(id, mBuilder.build());
         }
+        mBuilder.setProgress(100, percent, false);
+        mNotifyManager.notify(id, mBuilder.build());
     }
 }
