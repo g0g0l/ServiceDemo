@@ -21,6 +21,8 @@ public class Notifier {
         id = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
     }
 
+    // TODO: 25/2/18 fix oreo notification problem
+
     public void showStickyNotification() {
         mNotifyManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
         mBuilder = new NotificationCompat.Builder(mContext);
